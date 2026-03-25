@@ -43,3 +43,31 @@ export async function getRezervarile() {
 
   return { succes: true, date: data, mesaj: '' };
 }
+
+export type StatusRezervare = 'in asteptare' | 'confirmat' | 'respins';
+
+export async function schimbaStatus(id: string, status: StatusRezervare) {
+  const { error } = await supabase
+    .from('rezervari')
+    .update({ status })
+    .eq('id', id);
+
+  if (error) {
+    return { succes: false, mesaj: error.message };
+  }
+
+  return { succes: true, mesaj: `Rezervarea a fost marcata ca "${status}".` };
+}
+
+export async function stergeRezervare(id: string) {
+  const { error } = await supabase
+    .from('rezervari')
+    .delete()
+    .eq('id', id);
+
+  if (error) {
+    return { succes: false, mesaj: error.message };
+  }
+
+  return { succes: true, mesaj: 'Rezervarea a fost stearsa.' };
+}
