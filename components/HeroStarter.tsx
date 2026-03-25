@@ -58,10 +58,10 @@ export default function HeroStarter() {
 
           {/* Buton Secondary */}
           <a
-            href="#contact"
+            href="/rezervari"
             className="inline-flex items-center justify-center px-5 py-2 bg-transparent border-2 border-[#D4AF72] text-[#D4AF72] font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-[#D4AF72] hover:text-stone-900"
           >
-            Vizitează-ne
+            Rezervă o masă
           </a>
         </div>
       </div>

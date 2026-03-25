@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import FloatingRezervare from "@/components/FloatingRezervare";
 
 // 🎨 TIPOGRAFIE 100% SANS-SERIF - MODERN CLEAN
 // Plus Jakarta Sans - Sans-serif modern pentru TOATE titlurile (H1-H6)
@@ -64,6 +65,7 @@ export default function RootLayout({
         className={`${plusJakarta.variable} ${inter.variable} antialiased`}
       >
         {children}
+        <FloatingRezervare />
       </body>
     </html>
   );
