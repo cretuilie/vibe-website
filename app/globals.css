@@ -1,5 +1,41 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* HERO FADE-IN ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-title {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.5s forwards;
+}
+
+.hero-fade-subtitle {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.hero-fade-buttons {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 1.1s forwards;
+}
+
+.hero-fade-scroll {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 1.5s forwards;
+}
+
 /* 🌙 DARK MODE - Class Strategy (not media query) */
 @variant dark (&:where(.dark, .dark *));
 
