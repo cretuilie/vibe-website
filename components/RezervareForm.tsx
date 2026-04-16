@@ -88,12 +88,20 @@ export default function RezervareForm() {
           {dataSelectata && `${dataSelectata.getDate()} ${LUNA_SCURTA[dataSelectata.getMonth()]} ${dataSelectata.getFullYear()} — ${oraSelectata}`}
         </p>
         <p className="text-stone-500">Te așteptăm, <span className="font-semibold text-stone-800">{form.nume}</span>!</p>
-        <button
-          onClick={() => { setConfirmare(false); setPas(1); setDataSelectata(null); setOraSelectata(null); setForm({ nume: '', email: '', telefon: '', numar_persoane: 2 }); }}
-          className="mt-8 px-6 py-3 bg-[#D4AF72] hover:bg-black hover:text-[#D4AF72] text-stone-900 font-semibold rounded-lg transition-all duration-300"
-        >
-          Rezervare nouă
-        </button>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
+          <a
+            href="/"
+            className="px-6 py-3 border-2 border-stone-300 hover:border-stone-500 text-stone-600 hover:text-stone-900 font-semibold rounded-lg transition-all duration-300 text-center"
+          >
+            ← Înapoi pe site
+          </a>
+          <button
+            onClick={() => { setConfirmare(false); setPas(1); setDataSelectata(null); setOraSelectata(null); setForm({ nume: '', email: '', telefon: '', numar_persoane: 2 }); }}
+            className="px-6 py-3 bg-[#D4AF72] hover:bg-black hover:text-[#D4AF72] text-stone-900 font-semibold rounded-lg transition-all duration-300"
+          >
+            Rezervare nouă
+          </button>
+        </div>
       </div>
     );
   }
