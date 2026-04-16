@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import FloatingRezervare from "@/components/FloatingRezervare";
+import ChatWidget from "@/components/ChatWidget";
 
 // 🎨 TIPOGRAFIE 100% SANS-SERIF - MODERN CLEAN
 // Plus Jakarta Sans - Sans-serif modern pentru TOATE titlurile (H1-H6)
@@ -66,6 +67,7 @@ export default function RootLayout({
       >
         {children}
         <FloatingRezervare />
+        <ChatWidget />
       </body>
     </html>
   );
